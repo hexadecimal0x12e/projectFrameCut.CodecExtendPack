@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<PackageId>projectFrameCut.CodecExtendPack</PackageId>
+		<Version>8.0.1</Version>
+		<PackageProjectUrl>https://hexadecimal0x12e.com/</PackageProjectUrl>
+		<Title>projectFrameCut codec extend pack</Title>
+		<Authors>hexadecimal0x12e</Authors>
+		<Description>A plugin that provides some GPL-licensed codecs like libx264.</Description>
+		<PackageLicenseExpression>GPL</PackageLicenseExpression>
+		<PluginSignFilePath>D:\code\playground\projectFrameCut\key.json</PluginSignFilePath>
+		<PluginAssetPath>D:\code\playground\FFmpeg\codecPack</PluginAssetPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="D:\code\playground\projectFrameCut\published\WindowsUnpackaged-alpha1.3.0.1\projectFrameCut.Render.RenderAPIBase.dll" />
+		<Reference Include="D:\code\playground\projectFrameCut\published\WindowsUnpackaged-alpha1.3.0.1\projectFrameCut.Shared.dll" />
+		<PackageReference Include="projectFrameCut.PluginPackager.MSBuild" Version="1.0.1" />
+
+	</ItemGroup>
+</Project>
