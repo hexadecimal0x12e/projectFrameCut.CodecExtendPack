@@ -2,6 +2,7 @@
 using projectFrameCut.Render.RenderAPIBase.EffectAndMixture;
 using projectFrameCut.Render.RenderAPIBase.Plugins;
 using projectFrameCut.Render.RenderAPIBase.Sources;
+using projectFrameCut.Shared;
 using System.Text.Json;
 
 namespace projectFrameCut
@@ -10,28 +11,25 @@ namespace projectFrameCut
     {
         public Dictionary<string, Dictionary<string, string>> LocalizationProvider => new Dictionary<string, Dictionary<string, string>> 
         {
-            {
-                "en-US",
-                new Dictionary<string, string>
-                {
 
-                }
-            },
-            {
-                "option",
-                new Dictionary<string, string>
-                {
-                    {"_IsFFmpegLibraryProvider","true" },
-                    {"_FFmpegLicenseType","GPLv3" }
-                }
-            }
+        };
+
+        public IReadOnlyDictionary<string, string> Properties => new Dictionary<string, string>
+        {
+            {"IsFFmpegLibraryProvider","true" }
         };
 
         public Dictionary<string, Func<IEffect>> EffectProvider => new Dictionary<string, Func<IEffect>> { };
 
         public Dictionary<string, Func<IEffect>> ContinuousEffectProvider => new Dictionary<string, Func<IEffect>> { };
 
-        public Dictionary<string, Func<IEffect>> VariableArgumentEffectProvider => new Dictionary<string, Func<IEffect>> { };
+        public Dictionary<string, Func<IEffect>> BindableArgumentEffectProvider => new();
+
+        public Dictionary<string, IEffectFactory> EffectFactoryProvider => new();
+
+        public Dictionary<string, IEffectFactory> ContinuousEffectFactoryProvider => new();
+
+        public Dictionary<string, IEffectFactory> BindableArgumentEffectFactoryProvider => new();
 
         public Dictionary<string, Func<IMixture>> MixtureProvider => new Dictionary<string, Func<IMixture>> { };
 
@@ -68,5 +66,6 @@ namespace projectFrameCut
             return true;
         }
 
+        public IMessagingService MessagingQueue { get; set; }
     }
 }

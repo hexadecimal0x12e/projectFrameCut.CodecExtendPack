@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>projectFrameCut.CodecExtendPack</PackageId>
-		<Version>8.0.1</Version>
+		<Version>8.0.1.1</Version>
 		<PackageProjectUrl>https://hexadecimal0x12e.com/</PackageProjectUrl>
 		<Title>projectFrameCut codec extend pack</Title>
 		<Authors>hexadecimal0x12e</Authors>
@@ -14,12 +14,12 @@
 		<PackageLicenseExpression>GPL</PackageLicenseExpression>
 		<PluginSignFilePath>D:\code\playground\projectFrameCut\key.json</PluginSignFilePath>
 		<PluginAssetPath>D:\code\playground\FFmpeg\codecPack</PluginAssetPath>
-	</PropertyGroup>
+		</PropertyGroup>
 
 	<ItemGroup>
-		<Reference Include="D:\code\playground\projectFrameCut\published\WindowsUnpackaged-alpha1.3.0.1\projectFrameCut.Render.RenderAPIBase.dll" />
-		<Reference Include="D:\code\playground\projectFrameCut\published\WindowsUnpackaged-alpha1.3.0.1\projectFrameCut.Shared.dll" />
-		<PackageReference Include="projectFrameCut.PluginPackager.MSBuild" Version="1.0.1" />
+		<Reference Include="C:\Users\azert\source\repos\projectFrameCut.PluginTemplate\PluginBaseAssembly\projectFrameCut.Render.RenderAPIBase.dll" />
+		<Reference Include="C:\Users\azert\source\repos\projectFrameCut.PluginTemplate\PluginBaseAssembly\projectFrameCut.Shared.dll" />
+		<PackageReference Include="projectFrameCut.PluginPackager.MSBuild" Version="2.0.0" />
 
 	</ItemGroup>
 </Project>
