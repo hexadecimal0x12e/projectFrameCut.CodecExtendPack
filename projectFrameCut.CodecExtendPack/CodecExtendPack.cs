@@ -67,5 +67,7 @@ namespace projectFrameCut
         }
 
         public IMessagingService MessagingQueue { get; set; }
+
+        public Dictionary<string, Func<Guid, Guid, ITransform>> TransformProvider => new Dictionary<string, Func<Guid, Guid, ITransform>> { };
     }
 }
